@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Site de Bônus</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="background">
+    
+    <header class="header">
+        <h2 class="cabecalho">SHARK BET</h2>
+        <nav>
+            <ul class="navegacao">
+
+                <a href="index1.html">
+                    <input type= "button" a href="index1.html" class="botao1" value="SE CADASTRE" > 
+                
+                <a href="index.html">
+                    <input type= "button" a href="index.html" class="botao1" value="HOME" >
+                 </a>
+             <input type="button" onclick="convite()" class="botao1" value= "CLIQUE E RECEBA UM BONUS">
+
+            </a>
+
+            <input type="button" onclick="carros()" class="botao1" value= "CARROS GRATIS">
+            
+            </ul>
+        </nav>
+    </header>
+
+
+   
+        <p class="fontitulo"> GANHE PRÊMIOS NO SHARK BET!</p> 
+        <p class="fontitulo"> SEJA BEM-VINDO AO SHARKBET, APOSTE JÁ E DUPLIQUE SUA GRANA!</p> 
+        <input type="button" onclick="apertar()" class="botao2" value="CLIQUE JÁ!!!!!">
+
+
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.getElementById('userForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        enviar();
+    });
+
+    function apertar() {
+        let timerInterval;
+        Swal.fire({
+            title: "VOCÊ CLICOU NO BOTÃO PREMIADO! VOCÊ GANHOU UM TROJAN FLAME!",
+            html: "Sorria e acene, estamos te vendo. Acho melhor continuar apostando.",
+            timer: 2088,
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading();
+                const timer = Swal.getPopup().querySelector("b");
+                timerInterval = setInterval(() => {
+                    timer.textContent = `${Swal.getTimerLeft()}`;
+                }, 100);
+            },
+            willClose: () => {
+                clearInterval(timerInterval);
+            }
+        }).then((result) => {
+            if (result.dismiss === Swal.DismissReason.timer) {
+                console.log("I was closed by the timer");
+            }
+        });
+    }
+
+    function enviar() {
+        Swal.fire({
+            title: "PARABENS",
+            text: "SEUS DADOS FORAM COLETADOS E VAMOS FAZER BOM USO DELE NO TIGRINHO!",
+            icon: "success"
+        });
+    }
+
+    function carros() {
+        Swal.fire({
+            title: "PARABENS! AGORA É SÓ SAIR NA RUA E ESCOLHER O CARRO QUE QUISER, PEGAR E DIRIGIR!",
+            showClass: {
+                popup: `animate__animated animate__fadeInUp animate__faster`
+            },
+            hideClass: {
+                popup: `animate__animated animate__fadeOutDown animate__faster`
+            }
+        });
+    }
+
+    async function convite() {
+        const { value: password } = await Swal.fire({
+            title: "Estamos te esperando para uma nova rodada!",
+            input: "password",
+            inputLabel: "Insira a senha e número do cartão e brinque conosco!",
+            inputPlaceholder: "Digite Aqui.",
+            inputAttributes: {
+                maxlength: "10",
+                autocapitalize: "off",
+                autocorrect: "off"
+            }
+        });
+        if (password) {
+            Swal.fire(`Dados inseridos: ${password} - Essa ação terá consequências....`);
+        }
+    }
+</script>
+
+</body>
+</html>

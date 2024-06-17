@@ -1,0 +1,88 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+}
+.background{
+    background-image: url(../img/tubaroes2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+.fontitulo{
+    text-align: center;
+    animation: blink 0.5s steps(2, start) infinite;
+    justify-content: center;
+     font-size: 95px;
+     font-family: fantasy;
+     color: aliceblue;
+}
+
+.header{
+    justify-content: center;
+    text-decoration: none;
+    background-color: #6cafcaa6;
+}
+
+.cabecalho{
+     text-align: center;
+     justify-content: center;
+     font-size: 40px;
+     font-family: fantasy;
+     color: aliceblue;
+}
+
+.navegacao{
+    text-align: center;
+     justify-content: center;
+}
+
+
+.botao2 {
+    position: absolute;
+    top: 85%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #80b6e2;
+    background-color: #074a81 ;
+    width: 180px;
+    height: 70px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center; 
+}
+
+
+.botao1 {
+    color: #80b6e2;
+    background-color: #074a81 ;
+    width: 280px;
+    height: 70px ;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center; 
+    font-weight: bold;
+    color: #9cafbe;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 20px; 
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; }
